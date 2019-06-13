@@ -55,7 +55,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum by (status)(rate(track_in_progress[5s]))",
+          "expr": "sum by (status)(rate(track_in_progress[1m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"

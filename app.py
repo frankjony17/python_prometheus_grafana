@@ -9,6 +9,6 @@ if __name__ == '__main__':
         sleep_time = random.uniform(0.1, 1.9)
         print("Making {} requests after {} seconds".format(r_per_batch, sleep_time))
         for i in range(r_per_batch):
-           requests.get('http://localhost:5000/labels')
+            requests.get('http://localhost:5000/labels')
         time.sleep(sleep_time)
 
