@@ -1,4 +1,4 @@
-version: '3.1'
+version: '2'
 
 volumes:
     prometheus_data: {}
@@ -6,7 +6,7 @@ volumes:
 
 services:
   prometheus:
-    image: prom/prometheus:v2.1.0
+    image: prom/prometheus
     volumes:
       - prometheus_data:/prometheus
       - ./prometheus/:/etc/prometheus/
@@ -15,9 +15,11 @@ services:
     restart: always
 
   grafana:
-    image: grafana/grafana:5.0.4
+    image: grafana/grafana
+    container_name: grafana
     ports:
       - 3000:3000
+    user: "104"
     volumes:
       - grafana_data:/var/lib/grafana
     restart: always

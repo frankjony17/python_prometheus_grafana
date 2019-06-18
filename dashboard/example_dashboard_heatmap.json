@@ -1,0 +1,70 @@
+{
+  "id": 3,
+  "type": "heatmap",
+  "title": "Heatmap from Prometheus",
+  "gridPos": {
+    "x": 0,
+    "y": 0,
+    "w": 12,
+    "h": 9
+  },
+  "datasource": "Prometheus",
+  "targets": [
+    {
+      "refId": "A",
+      "expr": "sum by (Progress)(counter_total)",
+      "intervalFactor": 1,
+      "format": "heatmap",
+      "legendFormat": "{{ Progress }}",
+      "interval": "5s",
+      "instant": false
+    }
+  ],
+  "transparent": true,
+  "timeFrom": null,
+  "timeShift": null,
+  "links": [],
+  "cacheTimeout": null,
+  "options": {},
+  "heatmap": {},
+  "cards": {
+    "cardPadding": null,
+    "cardRound": null
+  },
+  "color": {
+    "mode": "spectrum",
+    "cardColor": "#b4ff00",
+    "colorScale": "sqrt",
+    "exponent": 0.5,
+    "colorScheme": "interpolateOranges"
+  },
+  "legend": {
+    "show": false
+  },
+  "dataFormat": "timeseries",
+  "yBucketBound": "auto",
+  "reverseYBuckets": false,
+  "xAxis": {
+    "show": true
+  },
+  "yAxis": {
+    "show": true,
+    "format": "currencyUSD",
+    "decimals": null,
+    "logBase": 1,
+    "splitFactor": null,
+    "min": null,
+    "max": null
+  },
+  "xBucketSize": null,
+  "xBucketNumber": null,
+  "yBucketSize": null,
+  "yBucketNumber": null,
+  "tooltip": {
+    "show": true,
+    "showHistogram": false
+  },
+  "highlightCards": true,
+  "hideZeroBuckets": false,
+  "interval": ""
+}
